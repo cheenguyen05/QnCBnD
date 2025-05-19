@@ -70,7 +70,7 @@ body {
 
 .albumSection, .contactSection {
     background-color: #bdc3c7;
-    color:#fff;
+    color:#000;
 }
 
 .owl-carousel .item img {
@@ -104,9 +104,9 @@ body {
 }
 
 .copyrightSection {
-    background-color: black;
-    color: #fff;
-    padding: 30px 5px;
+    background-color: #bdc3c7;
+    color: #000;
+    padding: 20px 5px;
 }
 
 .copyrightSection p {
@@ -131,4 +131,62 @@ body {
 .fixedNav #navigation {
     position: fixed;
     top: 0;
+}
+
+/* Social Media Section - Dạng cột */
+.social-icons-vertical {
+    display: flex;
+    flex-direction: column; /* Quan trọng: xếp dọc */
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px; /* Giới hạn độ rộng */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.social-icon:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+    transform: translateX(5px); /* Hiệu ứng di chuyển sang phải */
+}
+
+.icon-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px; /* Khoảng cách giữa icon và text */
+    object-fit: contain;
+}
+
+
+/* Dropdown menu styles */
+.navbar .dropdown-menu {
+  background-color: #9da5ac; /* Màu đậm hơn một chút */
+  border: none;
+  margin-top: 8px; /* Tạo khoảng cách với navbar */
+}
+
+.dropdown-item {
+  color: white !important;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #8b939b !important;
+}
+
+/* Mũi tên dropdown */
+.nav-link.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 10px;
 }

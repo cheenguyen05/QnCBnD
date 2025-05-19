@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> QwBnD</title>
 
     <link rel="stylesheet" type="text/css" href="other_css/superslides.css">
 
@@ -13,36 +12,55 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="icon" type="image/png" href="img/icons/blackhouselogo.png">
+    
+    <title> QwBnD</title>
  
 </head>
 <body>
     <nav id="navigation" class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="img/icons/houselogo.png" class="d-inline-block align-top" alt="Logo" height="30">
-        QnCBnD
+        QwBnD
       </a>
       
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <!--<li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+          </li>-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="membersDropdown" data-bs-toggle="dropdown" aria-expanded="false">Members' Info</a>
+            <ul class="dropdown-menu" aria-labelledby="membersDropdown">
+              <li><a class="dropdown-item" href="#">JAEHYUN</a></li>
+              <li><a class="dropdown-item" href="#">SUNGHO</a></li>
+              <li><a class="dropdown-item" href="#">RIWOO</a></li>
+              <li><a class="dropdown-item" href="#">TAESAN</a></li>
+              <li><a class="dropdown-item" href="#">LEEHAN</a></li>
+              <li><a class="dropdown-item" href="#">WOONHAK</a></li>
+            </ul>
           </li>
+
+
           <li class="nav-item">
-            <a class="nav-link" href="#">Members' Info</a>
+            <a class="nav-link" href="#album">Albums</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#album">Contents</a>
+            <a class="nav-link" href="#socialMedia">Social Media </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="aboutus.html">About us</a>
+            <a class="nav-link" href="content.html">Contents</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
+          </li>-->
         </ul>
       </div>
 
@@ -109,7 +127,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>Singles, EPs and Albums</h2>
-                    <p> A representation of all musical products that have been released so far</p>
+                    <p> A representation of some musical products that have been released so far</p>
                 </div>
 
                 <div class="owl-carousel owl-theme">
@@ -182,13 +200,54 @@
 
     </div>
 
+    <div id="socialMedia" class="smSection section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h2>Social Media</h2>
+                    <p class="subtitle">Follow BOYNEXTDOOR on</p>
+                
+                    <div class="social-icons-vertical">
+                        <!-- Twitter/X -->
+                        <a href="https://x.com/BOYNEXTDOOR_twt" target="_blank" class="social-icon">
+                            <img src="img/icons/xapp.png" alt="X" class="icon-img">
+                            <span>X</span>
+                        </a>
+                    
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/boynextdoor_official/" target="_blank" class="social-icon">
+                            <img src="img/icons/ig.png" alt="Instagram" class="icon-img">
+                            <span>Instagram</span>
+                        </a>
+                    
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/BOYNEXTDOOR.official" target="_blank" class="social-icon">
+                            <img src="img/icons/fb.png" alt="Facebook" class="icon-img">
+                            <span>Facebook</span>
+                        </a>
+                    
+                        <!-- Weverse -->
+                        <a href="https://weverse.io/boynextdoor" target="_blank" class="social-icon">
+                            <img src="img/icons/wv.png" alt="Weverse" class="icon-img">
+                            <span>Weverse</span>
+                        </a>
+                    
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@boynextdoor_official" target="_blank" class="social-icon">
+                            <img src="img/icons/ytb.png" alt="YouTube" class="icon-img">
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="contact"  class="contactSection section">
         <div class="col-md-12 text-center">
             <p class="subHeading">Like what you see?</p>
             <h2>I'd love to hear from you!</h2>
             <a href="mailTo:querenciabnd@gmail.com" class="contactButton">GET IN TOUCH!</a>
-
-
         </div>
 
     </div>
