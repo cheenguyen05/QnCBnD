@@ -1,0 +1,134 @@
+body {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.slides-navigation {
+    z-index: 6;
+}
+.slides-navigation .prev,
+.slides-navigation .next {
+    width: 47px;
+    height: 47px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.slides-navigation a.prev{
+    left: 20px;
+    background-image: url(../img/icons/prev.png);
+}
+
+.slides-navigation a.next{
+    right: 20px;
+    background-image: url(../img/icons/next.png);
+}
+
+.titleMessage {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -125px; 
+}
+
+.titleMessage .heading p{
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 100;
+    letter-spacing: 7px;
+}
+
+.titleMessage .heading .main {
+    font-size: 50px;
+}
+
+.titleMessage .heading .sub {
+    font-size: 23px;
+}
+
+.section {
+    padding: 100px 0;
+
+}
+
+.aboutImage {
+    max-width: 100%;
+}
+
+.albumSection, .contactSection {
+    background-color: #bdc3c7;
+    color:#fff;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.owl-carousel .item img:hover {
+    transform: scale(0.9);
+    opacity: 0.85;
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+.contactButton {
+    color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.contactButton:hover {
+    text-decoration: none;
+    color: #bdc3c7;
+    background-color: #fff;
+}
+
+.copyrightSection {
+    background-color: black;
+    color: #fff;
+    padding: 30px 5px;
+}
+
+.copyrightSection p {
+    margin: 0;
+}
+
+#navigation {
+    background-color: #bdc3c7;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li {
+    padding: 0 10px;
+}
+
+#navigation li a, #navigation .navbar-brand {
+    color: #fff;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+}
