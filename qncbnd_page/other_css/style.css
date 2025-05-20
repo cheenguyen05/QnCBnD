@@ -68,7 +68,7 @@ body {
     max-width: 100%;
 }
 
-.albumSection, .contactSection {
+.albumSection {
     background-color: #bdc3c7;
     color:#000;
 }
@@ -85,32 +85,6 @@ body {
     opacity: 0.85;
     border-radius: 10px;    
     cursor: pointer;
-}
-
-.contactButton {
-    color: #fff;
-    padding: 15px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    text-decoration: none;
-}
-
-.contactButton:hover {
-    text-decoration: none;
-    color: #bdc3c7;
-    background-color: #fff;
-}
-
-.copyrightSection {
-    background-color: #bdc3c7;
-    color: #000;
-    padding: 20px 5px;
-}
-
-.copyrightSection p {
-    margin: 0;
 }
 
 #navigation {
@@ -174,7 +148,7 @@ body {
 }
 
 .dropdown-item {
-  color: white !important;
+  color: white;
   padding: 8px 20px;
   transition: all 0.3s;
 }
@@ -183,10 +157,44 @@ body {
   background-color: #8b939b !important;
 }
 
-/* Mũi tên dropdown */
-.nav-link.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 5px;
-  vertical-align: middle;
-  font-size: 10px;
+/* Footer Section */
+.footerSection {
+    background-color: #bdc3c7;
+    color: #000;
+    padding: 80px 0 30px;
+    font-size: 15px;
+}
+.footer-about {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+.copyright {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.bndlogo {
+  max-width: 200px; /* Control logo size */
+  width: 100%;
+  height: auto;
+  display: inline-block; /* Needed for text-center to work */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* About Section Logo Styling */
+.logo-container {
+  margin: 20px 0; /* Adds space above and below */
+  padding: 15px 0; /* Extra padding */
+}
+
+/* Ensures proper spacing after logo */
+.logo-container + p {
+  margin-top: 25px; /* Space before dorm info */
+  padding-top: 15px;
+  border-top: 1px solid #eee; /* Optional divider */
 }
