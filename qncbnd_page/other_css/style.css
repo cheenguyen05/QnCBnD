@@ -198,3 +198,62 @@ body {
   padding-top: 15px;
   border-top: 1px solid #eee; /* Optional divider */
 }
+
+/* Member Profile Styling */
+.member-info {
+    background-color: rgba(189, 195, 199, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.member-details {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.member-details li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.fun-facts {
+    columns: 2;
+    column-gap: 30px;
+}
+
+.fun-facts li {
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.member-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.member-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #9da5ac;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.member-link:hover {
+    background-color: #8b939b;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.member-link i {
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
