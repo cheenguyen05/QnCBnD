@@ -25,33 +25,63 @@ $(document).ready(function(){
         }
     });
 
-    // Kiểm tra link có thuộc trang hiện tại không
-    function isSamePage(href) {
-      return href.startsWith("#") || 
-             href.startsWith(window.location.pathname + "#") || 
-             href === "";
+    // Hàm kiểm tra có phải là trang index không
+    function isIndexPage() {
+        return ['index.html', '', '/'].some(p => 
+            window.location.pathname.endsWith(p)
+        );
     }
 
+    // Xử lý tất cả link trong navigation
     $("#navigation a").click(function(e) {
-      var href = $(this).attr("href");
-  
-      if (!isSamePage(href)) {
-        return true; // Chuyển trang
-      }
-  
-      e.preventDefault();
-  
-      // Xử lý scroll
-      var target = href.split("#")[1] || "";
-      if (target) {
-        var targetElement = $("#" + target);
-        if (targetElement.length) {
-          $("html, body").animate({
-            scrollTop: targetElement.offset().top - 50
-          }, 800);
+        var href = $(this).attr("href");
+        
+        // 1. Xử lý link có dạng index.html#section
+        if (href.includes("index.html#")) {
+            if (!isIndexPage()) {
+                e.preventDefault();
+                window.location.href = href;
+                return false;
+            }
+            // Nếu đang ở index.html thì để phần dưới xử lý scroll
         }
-      }
+        
+        // 2. Xử lý link nội bộ (#section)
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            var target = href.substring(1);
+            if (target) {
+                var targetElement = $("#" + target);
+                if (targetElement.length) {
+                    $("html, body").animate({
+                        scrollTop: targetElement.offset().top - 50
+                    }, 800);
+                    // Update URL nếu cần
+                    if (history.pushState) {
+                        history.pushState(null, null, href);
+                    } else {
+                        window.location.hash = href;
+                    }
+                }
+            }
+            return false;
+        }
+        
+        // 3. Các link khác sẽ chuyển trang bình thường
     });
+
+    // Xử lý khi trang load với hash
+    if (window.location.hash) {
+        var target = $(window.location.hash);
+        if (target.length) {
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 50
+                }, 500);
+            }, 100);
+        }
+    }
+    
 
     const nav = $("#navigation");
     const navTop = nav.offset().top;
